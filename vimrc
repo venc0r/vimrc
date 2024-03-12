@@ -16,7 +16,6 @@ set nowrap
 set incsearch
 set scrolloff=8
 set sidescrolloff=8
-set noshowmode
 set laststatus=2
 
 set number
@@ -30,6 +29,9 @@ set splitright
 
 set path+=**
 set wildmenu
+
+set background=dark
+colorscheme retrobox
 
 syntax on
 
