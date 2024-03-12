@@ -72,8 +72,8 @@ inoremap <C-c> <Esc>
 nnoremap <leader>e :Explore<CR>
 
 " base64 en/decode
-vnoremap <leader>64 :by<CMD>let @b=system('base64 --decode', @b)<cr>gv"bP
-vnoremap <leader>46 :by<CMD>let @b=system('base64', @b)<cr>gv"bP
+vnoremap <leader>64 "by:let @b=system('base64 --decode', @b)<cr>gv"bP
+vnoremap <leader>46 "by:let @b=system('base64', @b)<cr>gv"bP
 
 " replace word under cursor
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
