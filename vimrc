@@ -15,6 +15,7 @@ set noerrorbells
 set nowrap
 set incsearch
 set scrolloff=8
+set sidescrolloff=8
 set noshowmode
 set laststatus=2
 
