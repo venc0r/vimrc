@@ -15,13 +15,14 @@ set noerrorbells
 set nowrap
 set incsearch
 set scrolloff=8
+set sidescrolloff = 8
 set noshowmode
 set laststatus=2
 
 set number
 set relativenumber
 set signcolumn=yes
-set colorcolumn=120
+set colorcolumn=100
 set ignorecase
 set smartcase
 set splitbelow
@@ -34,13 +35,6 @@ syntax on
 
 " Keymaps
 let mapleader = " "
-
-" " Theme
-" colo gruvbox
-" set background=dark
-
-" " Yank to clipboard
-" set clipboard=unnamedplus
 
 nnoremap Q <nop>
 " Y copy end to line
@@ -61,12 +55,7 @@ nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 
 " random binds
 nnoremap <C-s> :wa<CR>
-
-" fzf
-nnoremap <Leader>tt :Files<CR>
-nnoremap <Leader>tn :Rg<CR>
 nnoremap <Leader>q :bd<CR>zz
-
 inoremap <C-c> <Esc>
 
 " move visible block
@@ -78,6 +67,20 @@ vnoremap <leader>p "_dp
 vnoremap <leader>P "_dP
 
 inoremap <C-c> <Esc>
+
+" fileexplorer
+nnoremap <leader>e :Explore<CR>
+
+" base64 en/decode
+vnoremap <leader>64 :by<CMD>let @b=system('base64 --decode', @b)<cr>gv"bP
+vnoremap <leader>46 :by<CMD>let @b=system('base64', @b)<cr>gv"bP
+
+" replace word under cursor
+nnoremap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
+
+" keep highlighted when indenting
+vnoremap > >gv
+vnoremap < <gv
 
 " strip whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
