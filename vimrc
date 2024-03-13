@@ -31,7 +31,7 @@ set path+=**
 set wildmenu
 
 set background=dark
-colorscheme retrobox
+colorscheme slate
 
 syntax on
 
