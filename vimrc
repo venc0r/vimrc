@@ -37,6 +37,7 @@ syntax on
 
 " Keymaps
 let mapleader = " "
+let g:netrw_banner = 0
 
 nnoremap Q <nop>
 " Y copy end to line
