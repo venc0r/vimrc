@@ -66,8 +66,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " pasteover over
-vnoremap <leader>p "_dp
-vnoremap <leader>P "_dP
+vnoremap <leader>p "_dP
 
 inoremap <C-c> <Esc>
 
